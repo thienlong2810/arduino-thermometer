@@ -1,5 +1,5 @@
 - This thermometer is based on arduino UNO R3.
-- The temperature is shown through a LCD 16*2.
+- The temperature is shown on a 16*2 LCD.
 - The buzzer sounds an alarm when the temperature exceeds the standard level (60*C).
 - The range of this thermometer is from -55C to 125C.
 - The image shows that the sensor is TMP36, but in reality and code, it is DS18B20.
