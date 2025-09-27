@@ -2,8 +2,8 @@
 - The temperature is shown through a LCD 16*2.
 - The buzzer sounds an alarm when the temperature exceeds the standard level (60*C).
 - The range of this thermometer is from -55C to 125C.
-- The image shows that the sensor is TMP36, but in reality, it is DS18B20.
+- The image shows that the sensor is TMP36, but in reality and code, it is DS18B20.
 - There are some different in connecting the temperature sensor DS18B20:
   - GND -> (-)
   - VCC -> (+)
-  - DAT -- to Digital 2 -- resistor (4k7) -- (+) // on a row on breadboard
+  - DAT -- to Digital 2 -- resistor (4k7) -- (+) // on one row on breadboard
