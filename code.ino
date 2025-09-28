@@ -31,6 +31,7 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print("Nhiet do ");
   lcd.print(tempC);
+  lcd.print((char)223); // ký hiệu độ °
   lcd.print("C   ");
 
   float tempF = 1.8 * tempC + 32;
@@ -38,6 +39,7 @@ void loop() {
 
   lcd.print("Nhiet do ");
   lcd.print(tempF);
+  lcd.print((char)223); // ký hiệu độ °
   lcd.print("F   ");
 
   if (tempC > 50) {
