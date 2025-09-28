@@ -17,6 +17,11 @@ void setup() {
   pinMode(buzzer, OUTPUT);
 
   sensors.begin(); // khởi động DS18B20
+
+  // Bíp khi khởi động
+  tone(buzzer, 1000);  // phát âm tần số 1000Hz
+  delay(500);          // kêu 0.5 giây
+  noTone(buzzer);      // tắt buzzer
 }
 
 void loop() {
@@ -26,16 +31,24 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print("Nhiet do ");
   lcd.print(tempC);
-  lcd.print("C   ");  
+  lcd.print("C   ");
 
-  if (tempC > 60) {
+  float tempF = 1.8 * tempC + 32;
+  lcd.setCursor(0, 1);
+
+  lcd.print("Nhiet do ");
+  lcd.print(tempF);
+  lcd.print("F   ");
+
+  if (tempC > 50) {
     tone(buzzer, 1000);
-    lcd.setCursor(0, 1);
-    lcd.print("Qua nong!     ");
+    //lcd.setCursor(0, 1);
+    //lcd.print("Qua nong!     ");
+    
   } else {
     noTone(buzzer);
-    lcd.setCursor(0, 1);
-    lcd.print("Binh thuong   ");
+    //lcd.setCursor(0, 1);
+    //lcd.print("Binh thuong   ");
   }
 
   delay(1000);
